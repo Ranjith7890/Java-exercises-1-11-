@@ -1,0 +1,404 @@
+1.Declare three number variables with value as 12,25,89 find the greatest number and display.
+------------------------------------------------------------------------------------------------
+public class GreatestNumber {
+	public static void main (String[] args) {
+// Declaring& initializing the variables
+			int a = 12;
+			int b = 25;
+			int c = 89;
+			if (a>b && a>c)
+			{
+				System.out.println("Greatest number is " + a);
+			}
+			else if (b>a && b>c)
+			 {
+				System.out.println("Greatest number is " + b);		
+			}
+			else if (c>a && c>b) 
+			 {
+				 System.out.println("Greatest number is " + c);
+			}
+			}
+}
+---------------------------------------------------------------------------------------------------------
+2.Write a program in java to display the first 10 natural numbers. Expected output is 1 to 10 numbers
+
+public class NaturalNum {
+	/**Write a program in java to display the first 10 natural numbers.
+	 Expected output is 1 to 10 numbers*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("the First 10 Natural Numbers are :");
+		int i;
+		for (i=1;i<=10;i++)
+		{      
+			System.out.println (i);
+		}
+	}
+
+}
+---------------------------------------------------------------------------------------------------------
+3.Write a java program to display the cube of the given number for ex: if given number is 2 then cube of it is 8
+
+public class CubeOfNumber {
+	public static void main (String[] args) {
+		int a =2;
+		System.out.println("the cube of 2 is " +(a*a*a));
+		}
+
+}
+-------------------------------------------------------------------------------------------------------------------
+4.Write a java program to sum values of an array. For example a[5] ={1,2,3,4,5,6} the sum of the values is 21.
+
+public class SumOfArray {
+	public static void main (String[] args) {
+		// initialization of array
+		int [] arr = {1, 2, 3, 4, 5, 6};
+		int sum = 0;
+
+		 for (int i = 0; i < arr.length; i++) {  
+	           sum = sum + arr[i];  
+	        }  
+		 // print the sum of all array integers
+		System.out.println("The sum is " + sum);
+		}
+
+}
+-----------------------------------------------------------------------------------------------------------------------
+5.Write a java program to test if an array contains a specific value
+
+
+public class SpecificArray {
+	public static void main(String[] args) {
+	//	Write a java program to test if an array contains a specific value
+		int[] num = {1, 2, 3, 4, 5, 6};
+	    int Find = 6;
+	    boolean found = false;
+	    for (int n : num) {
+	      if (n == Find) {
+	        found = true;
+	        break;
+	      }
+	    }
+	    if(found)
+	      System.out.println(Find + " is found.");
+	    else
+	      System.out.println(Find + " is not found.");
+	}
+}
+------------------------------------------------------------------------------------------------------------------
+6.Write a java program to reverse an array of integer values.
+
+public class ReverseOfArray {
+	// Write a java program to reverse an array of integer values
+	 public static void main(String[] args) {   
+	        int [] array = {1, 2, 3, 4, 5};  
+	        System.out.print("Original array: ");  
+	        for (int i = 0; i < array.length; i++) {  
+	            System.out.print(array[i] +" "); 
+	        }
+	            System.out.print("\n");  
+	        System.out.println("Array in reverse order: ");
+	        for (int i = array.length-1; i >= 0; i--) {  
+	            System.out.print(array[i]+" ");  
+	        }  
+	    }  
+}
+----------------------------------------------------------------------------------------------------------------------
+7.Create student class having stdID , stdName, stdClass and display the information of two objects
+
+public class Student {
+	  // initializing the attributes
+             int stdID;
+    		 String stdName;
+    		 String stdClass;  
+    
+public static void main(String[] args) {
+        // creating object of class Student
+        Student st1 = new Student();
+        Student st2 = new Student();
+        st1.stdID= 21463;
+        st1.stdName="Ranjith";
+        st1.stdClass="fifth";
+        st2.stdID= 21464;
+        st2.stdName="Shyam";
+        st2.stdClass="fifth";
+        // displaying the  students details
+        System.out.println("the student id is "+st1.stdID + " student Name is " + st1.stdName + " Student class is " + st1.stdClass);
+        System.out.println("the student id is "+st2.stdID + " student Name is " + st2.stdName + " Student class is " + st2.stdClass);
+        
+    }
+  }
+---------------------------------------------------------------------------------------------------------------------------------------------
+8.Create a product class The properties are ProID, ProName, ProPrice display the information and ProPrice will be added additional tax of GST.
+
+
+public class Product {
+	// initializing the Properties
+	int ProID;
+	 String ProName;
+	 double Price; 
+	double GST;
+	// creating method
+	public double ProPrice() {
+		return Price + GST;
+	}
+	public static void main(String[] args) {
+		//creating object for product class
+		 Product p1 = new Product();
+		 p1.ProID = 1234;
+		 p1.ProName=" G-shock Watch";
+		 p1.Price=5000;
+		 p1.GST= p1.Price/18;
+		 // displaying the product information
+		 System.out.println(" the product ID is " + p1.ProID + " "+ "the product name is " + p1.ProName + " "+  "the price of watch is " +  p1.Price);
+		System.out.println( " After adding the GST  Price  is " +  p1.ProPrice());		 
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.Create a IPhone class based on the memory size the price of the IPhone will be displayed.
+
+public class Iphone1 {
+	int memorysize = 128;
+	String name= "Iphone XR";
+	String name1= "Iphone X";
+	String name2= "Iphone 11";
+	int price= 20000;
+	int price1= 40000;
+	int price2 = 50000;
+	
+	void price() {
+	if(memorysize==64) {
+	System.out.println("the name of Phone is:" + name + " Price is :"+ price);
+	}
+
+	else if (memorysize==128) {
+	System.out.println("the name of Phone is:" + name1 + " Price is :"+ price1);
+	}
+
+	else if (memorysize==256) {
+	System.out.println("the name of Phone is:" + name1 +" Price is :"+ price2);
+	}
+
+	}
+	public static void main(String[] args) {
+	Iphone1 Ip=new Iphone1();
+	Ip.memorysize=128;
+	Ip.price();
+	}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------
+10.Create a Employee class with below properties and methodsempId, empName,empSal and public void display(){} ,
+public void salCal(){} implement the inheritance & polymorphism functionality for Manager ,Developer, Tester class override the SalCal function.
+
+
+public class Employee {
+	public int empID;
+	public String empName;
+	public double empSal;
+	public Employee(int empID, String empName, double empSal) {
+		super();
+		this.empID = empID;
+		this.empName = empName;
+		this.empSal = empSal;	
+	}
+	public double SalCal(){
+		double hra=0.18*empSal;
+		double da=0.08*empSal;
+		double totalsal=empSal+hra+da;
+		System.out.println("the employee salary is :" + totalsal);
+		 return totalsal;
+	}
+	public void display() {
+		System.out.println( "the employee ID is:" + empID);
+		System.out.println("the employee Name is:" + empName);	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e=new Employee(21465,"Ranjith", 29000);
+		Manager m=new Manager(2223, "shyam", 36000);
+		Developer dev= new Developer(2343, "yeshwanth", 30000);
+		TestingPerson test= new TestingPerson(21467,"Ganesh", 20000);
+		e.display();
+		e.SalCal();
+		e=m;
+		m.display();
+	        m.SalCal();
+		e=dev;
+	        dev.display();
+	        dev.SalCal();
+	        e=test;
+	        test.display();
+	        test.SalCal();
+	}
+}
+
+
+public class Manager extends Employee {
+	int MgrId;
+	String MgrName;
+	double MgrSal;
+	
+	public Manager(int empID, String empName, double empSal) {
+		super(empID, empName, empSal);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double SalCal() {
+		double hra=0.18*empSal;
+		double da=0.10*empSal;
+		double totalsal=empSal+hra+da;
+		System.out.println("the manager employee salary is :" + totalsal);
+		 return totalsal;	
+	}
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println( "the  manager employee ID is:" + empID);
+		System.out.println("the  manager employee Name is:" + empName);	
+	}	
+}
+
+
+public class Developer extends Employee {
+	public int devID;
+	public String devName;
+	public double devSal;
+	
+	public Developer(int empID, String empName, double empSal) {
+		super(empID, empName, empSal);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public double SalCal() {
+		double hra=0.18*empSal;
+		double da=0.08*empSal;
+		double totalsal=empSal+hra+da;
+		System.out.println("the developer employee salary is :" + totalsal);
+		 return totalsal;		
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println( "the developer employee ID is:" + empID);
+		System.out.println("the developer employee Name is:" + empName);	
+	}	
+}
+
+
+
+public class TestingPerson extends Employee {
+	
+	public int testID;
+	public String testName;
+	public double testSal;
+
+@Override
+	public void display() {
+		// TODO Auto-generated method stub
+	System.out.println( "the Tester employee ID is:" + empID);
+	System.out.println("the Tester employee Name is:" + empName);
+	}
+public TestingPerson(int empID, String empName, double empSal) {
+	super(empID, empName, empSal);
+	// TODO Auto-generated constructor stub
+}
+public double SalCal(){
+	double hra=0.18*empSal;
+	double da=0.04*empSal;
+	double totalsal=empSal+hra+da;
+	System.out.println("the tester employee salary is :" + totalsal);
+	 return totalsal;
+}
+}
+------------------------------------------------------------------------------------------------------------------
+11.Create a Shape class to draw a diagram like rectangle, square, triangle , with same properties like length , height, width and 
+   calculate the radius  of it by overriding the method in respective class.
+
+
+public abstract class Shape {
+	private double height;  
+	   private double width;  
+
+	   // Creating Parameterized Constructor
+	   public void setValues(double height, double width)
+	   {
+	      this.height = height;
+	      this.width = width;
+	   }
+	   //Get height
+	   public double getHeight() 
+	   {
+	       return height;
+	   }	     
+	   //Get width
+	   public double getWidth() 
+	   {
+	       return width;
+	   } 
+	   // The getArea method is abstract.   
+	   // It must be overridden in a subclass. 
+	   public abstract double getArea();
+	}
+
+
+public class Triangle extends Shape
+{ 
+    //Calculate and return area of triangle
+    public double getArea() 
+    {
+        return (getHeight() * getWidth()) / 2;
+    }
+} 
+
+
+public class Square extends Shape
+{
+    //Calculate and return area of Square
+    public double getArea()
+    {
+        return getHeight() * getWidth();
+    }
+}
+
+
+public class Rectangle extends Shape
+{
+    //Calculate and return area of rectangle
+    public double getArea()
+    {
+        return getHeight() * getWidth();
+    }
+}
+
+// Main Class initializing
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+	Shape shape;
+        Rectangle rect = new Rectangle();
+        shape = rect;
+        shape.setValues(40, 5);
+        //Display the area of rectangle
+        System.out.println("Area of rectangle : " + shape.getArea());
+        Triangle tri = new Triangle();        
+        shape = tri;        
+        shape.setValues(48,6);
+        //Display the area of triangle        
+        System.out.println("Area of triangle : " + shape.getArea());
+        // assign subclass reference to subclass variable
+        Rectangle rect1 = new Rectangle();
+        shape = rect1;
+        shape.setValues(60, 8); 
+        //Display the area of square
+        System.out.println("Area of square : " + shape.getArea());
+        Square squ1 = new Square();     
+        shape = squ1;      
+	}
+}
+--------------------------------------------------------------------------------------------------------------      
+
+    
